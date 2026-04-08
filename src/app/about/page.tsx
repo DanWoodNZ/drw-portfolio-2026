@@ -196,7 +196,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Photography */}
+      {/* Photography 
       <div className="w-full px-4 md:px-8 xl:px-[12%] pb-40">
         <h2 className="text-4xl font-semibold mb-12">Snaps 📸</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -204,16 +204,16 @@ export default function About() {
             <span className="text-foreground/20 text-xs font-semibold uppercase tracking-widest px-4">
               Upload Photo 1
             </span>
-            {/* <Image src="/my-photo-1.jpg" alt="Photography 1" fill className="object-cover" /> */}
+            <Image src="/my-photo-1.jpg" alt="Photography 1" fill className="object-cover" />
           </div>
           <div className="w-full aspect-[4/3] bg-foreground/5 rounded-[32px] border border-foreground/5 flex items-center justify-center relative overflow-hidden">
             <span className="text-foreground/20 text-xs font-semibold uppercase tracking-widest px-4">
               Upload Photo 2
             </span>
-            {/* <Image src="/my-photo-2.jpg" alt="Photography 2" fill className="object-cover" /> */}
+            <Image src="/my-photo-2.jpg" alt="Photography 2" fill className="object-cover" />
           </div>
         </div>
-      </div>
+      </div>*/}
 
       <Footer />
     </main>

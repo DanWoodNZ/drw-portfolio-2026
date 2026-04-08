@@ -14,7 +14,12 @@ export default function ProjectPage() {
 
       {/* Editable Top Hero Layout */}
       <HeroReveal className="w-full px-4 md:px-8 xl:px-[12%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
-        <ProjectSwitcher currentSlug="current-ia" />
+        <div className="flex w-full items-center justify-between">
+          <ProjectSwitcher currentSlug="current-ia" />
+          <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
+            2025
+          </div>
+        </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I overhauled an out-of-date information architecture for Current, improving feature discoverability and conversion.
         </h1>
@@ -156,6 +161,10 @@ export default function ProjectPage() {
         </div>
       </ScrollReveal>
 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+        <ProjectImage src="/projects/current/ia-handoff.webp" />
+      </ScrollReveal>
+
       {/* Case Study Block */}
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
@@ -220,7 +229,7 @@ export default function ProjectPage() {
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
         <ProjectImage src="/projects/current/current-ia-phase-3.webp" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+        <ProjectImage src="/projects/current/current-ia-tempest.webp" />
       </ScrollReveal>
 
       {/* Case Study Block */}
@@ -254,27 +263,59 @@ export default function ProjectPage() {
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Outcomes</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
-            5. The Results
+            What did we achieve?
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
           <div className="flex flex-col gap-6">
             <div className="border-l-4 border-foreground/20 pl-6 py-2">
-              <h4 className="text-foreground font-bold text-xl mb-2">Increase in Paycheck Advance & Overdraft engagement</h4>
-              <p className="text-foreground/70 text-base md:text-lg font-medium"><strong className="text-foreground">Why this is a good result based on the RFC:</strong> The primary goal was increasing discoverability and clicks to high-value features without hurting business-critical metrics.</p>
+              <h4 className="text-foreground font-bold text-xl mb-2">Increase in engagement</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium"> The primary goal was increasing discoverability and clicks to high-value features without hurting business-critical metrics.<br /></p><br />
+              <ul className="list-disc pl-5 text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl flex flex-col gap-2">
+                <li><strong>Paycheck Advance:</strong> 14.6% increase in click-through rate, 3% increase in draws</li>
+                <li><strong>Overdraft:</strong> 6.9% increase in click-through rate</li>
+                <li><strong>Referrals:</strong> 12.4% increase in click-through rate</li>
+              </ul>
             </div>
             <div className="border-l-4 border-foreground/20 pl-6 py-2">
-              <h4 className="text-foreground font-bold text-xl mb-2">Lift in D35 Payroll Conversion</h4>
-              <p className="text-foreground/70 text-base md:text-lg font-medium"><strong className="text-foreground">Why this is a good result based on the RFC:</strong> The RFC specifically lists D35 payroll conversion (neutral or positive) as the main primacy success metric for Phase 2.</p>
+              <h4 className="text-foreground font-bold text-xl mb-2">Small lift in payroll conversion</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium"> Increasing payroll conversion wasn't a make or break for this project, but we saw a small lift due to increased discoverability of Paycheck Advance and referrals on the homescreen.</p>
             </div>
             <div className="border-l-4 border-foreground/20 pl-6 py-2">
-              <h4 className="text-foreground font-bold text-xl mb-2">Maintained / Reduced PCA Inbound Support Volume</h4>
-              <p className="text-foreground/70 text-base md:text-lg font-medium"><strong className="text-foreground">Why this is a good result based on the RFC:</strong> A major risk was that exposing limits on the home screen would cause user confusion and spike support tickets. Showing you kept this stable proves your UI states successfully communicated complex financial data.</p>
+              <h4 className="text-foreground font-bold text-xl mb-2">Multiple campaigns viewed on discover</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium"> Over a month-long monitoring period, with 5 campaigns launched, we had 245k unique users visit the discover tab, with 7,342 cross-campaign users, something our old interstitial method couldn't emulate.</p>
+            </div>
+            <div className="border-l-4 border-foreground/20 pl-6 py-2">
+              <h4 className="text-foreground font-bold text-xl mb-2">Dedicated portal for self service</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium"> Through the completion of the discover tab, we also created a dedicated portal for PMMs to self serve campaigns on the discover tab, complete with prioritization.</p>
             </div>
           </div>
         </div>
       </ScrollReveal>
 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+        <ProjectImagePair left="/projects/current/current-ia.webm" right="/projects/current/pca-draw.webm" />
+      </ScrollReveal>
+
+      {/* Case Study Block */}
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+        <div className="w-full lg:w-[40%]">
+          <Eyebrow>Expansion</Eyebrow>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
+            What's next?
+          </h2>
+        </div>
+        <div className="w-full lg:w-[60%] flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
+            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
+              The discover tab was originally proposed as a place to explore a range of content, and was descoped for launch to just two categories, rewards and offers. Work is underway to bring the full vision to life, including educational content, points offers and more.
+            </p>
+            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
+              A full overhaul of the monitor tab is also in the works, (a tab that hasn't seen love in over two years) with the goal of bringing more useful insights and financial information to users.
+            </p>
+          </div>
+        </div>
+      </ScrollReveal>
 
 
       {/* Editable Project Credits */}

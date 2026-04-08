@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import Image from "next/image";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { HeroReveal } from "@/components/HeroReveal";
+import { BeforeAfter } from "@/components/BeforeAfter";
 
 export default function ProjectPage() {
 
@@ -13,9 +14,14 @@ export default function ProjectPage() {
 
       {/* Editable Top Hero Layout */}
       <HeroReveal className="w-full px-4 md:px-8 xl:px-[12%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
-        <ProjectSwitcher currentSlug="current-direct-deposit" />
+        <div className="flex w-full items-center justify-between">
+          <ProjectSwitcher currentSlug="current-direct-deposit" />
+          <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
+            2026
+          </div>
+        </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
-          I overhauled the direct deposit flow to reduce duplicate switches by 60%, while simultaneously improving conversion and providing better clarity around timing for users.
+          I overhauled the direct deposit flow to reduce duplicate switches by 60%, while providing better clarity around timing for users.
         </h1>
       </HeroReveal>
 
@@ -42,14 +48,21 @@ export default function ProjectPage() {
           <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
             Direct deposit is the lifeblood of fintech primacy, but our users were being left in the dark during the crucial waiting period. Like many fintech platforms, growth at Current relies on users setting up direct deposit to unlock premium benefits. Optimizing this journey was essential to driving both conversion and long-term retention.
             <br /><br />
-            To fix this, I led the overhaul of our direct deposit setup and tracking experience. We created a clear feedback loop to reduce user anxiety, decrease duplicate setup attempts, and transparently connect payroll deposits to benefits those deposits unlocked.
+            To fix this, I led design for the overhaul of our direct deposit setup and tracking experience. We created a clear feedback loop to reduce user anxiety, decrease duplicate setup attempts, and transparently connect payroll deposits to benefits those deposits unlocked.
           </p>
         </div>
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-16 md:mb-24">
-        <ProjectImage src="/placeholder.svg" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+      {/* Before / After */}
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+        <BeforeAfter
+          beforeSrc="/projects/current/current-dd-before.webp"
+          afterSrc="/projects/current/current-dd-after.webp"
+          beforeMobileSrc="/projects/current/current-dd-before-mobile.webp"
+          afterMobileSrc="/projects/current/current-dd-after-mobile.webp"
+          beforeLabel="Before"
+          afterLabel="After"
+        />
       </ScrollReveal>
 
       {/* Case Study Block */}
@@ -63,20 +76,19 @@ export default function ProjectPage() {
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
-              Our existing direct deposit flow lacked a post-setup feedback loop. Users would submit a switch, but see no change in the app while waiting for their first paycheck to land. This opacity led to several critical business and user pain points:
+              Our direct deposit flow lacked post-setup feedback, leaving users in the dark until their first paycheck arrived. This lack of guidance caused three major pain points:
             </p>
             <ul className="list-disc pl-5 text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl flex flex-col gap-2 mb-4">
-              <li><strong>High drop-off & switch duplication:</strong> Only about half of the users who submitted a switch via Pinwheel actually received a deposit within 35 days. Frustrated by the lack of feedback, many users submitted the exact same switch twice, with ~30% of switches being duplicates.</li>
-              <li><strong>Support burden:</strong> Deposit status was the number one inbound support category for D35 payrollers. Users were tracking their deposits down to the minute and venting on platforms like Reddit when they were delayed.</li>
-              <li><strong>Feature confusion:</strong> Users who successfully set up their direct deposit were confused about how it impacted their eligibility for features like Paycheck Advance or Fee-Free Overdraft. Some would receive a deposit but fail to unlock benefits (due to minimum deposit rules) and could not understand why.</li>
+              <li><strong>High drop-off & switch duplication:</strong> Only ~50% of switches converted to a deposit within 35 days. Through cs inbound and public comms, we knew users were confused by the lack of visibility. This resulted in users often resubmitting, resulting in ~30% of switches as pure duplicates.</li>
+              <li><strong>Support burden:</strong> Payroll status was our number one inbound support category. Users were tracking their deposits down to the minute and venting on platforms like Reddit when they were delayed.</li>
+              <li><strong>Benefits confusion:</strong> Users who successfully set up their direct deposit were confused about how it impacted their eligibility for features like Paycheck Advance or Fee-Free Overdraft. Some would receive a deposit but fail to unlock benefits (due to minimum deposit rules) and could not understand why.</li>
             </ul>
           </div>
         </div>
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-16 md:mb-24">
-        <ProjectImage src="/placeholder.svg" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+        <ProjectImagePair left="/projects/current/current-dd-reddit.webp" right="/projects/current/current-dd-appbot.webp" />
       </ScrollReveal>
 
       {/* Case Study Block */}
@@ -84,7 +96,7 @@ export default function ProjectPage() {
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Strategy</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.1]">
-            Strategy &amp; Hypotheses
+            The game plan
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
@@ -97,16 +109,13 @@ export default function ProjectPage() {
               <li><strong>Clarify benefit unlocking:</strong> Make it explicit that benefits unlock after the direct deposit lands, not just when the switch is submitted.</li>
               <li><strong>Predict deposit timing:</strong> Give users an estimate of when to expect their next paycheck.</li>
             </ol>
-            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
-              To test our hypotheses, we put together high fidelity flows for usability testing, to get an initial read on whether we were on the right track.
-            </p>
           </div>
         </div>
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-16 md:mb-24">
-        <ProjectImage src="/placeholder.svg" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+        <ProjectImage src="/projects/current/current-dd-original-test.webp" />
+        <ProjectImagePair left="/projects/current/current-dd-exploration-1.webp" right="/projects/current/current-dd-exploration-2.webp" />
       </ScrollReveal>
 
       {/* Case Study Block */}
@@ -124,7 +133,6 @@ export default function ProjectPage() {
             </p>
             <ul className="list-disc pl-5 text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl flex flex-col gap-2">
               <li><strong>Timeline expectations:</strong> We discovered users explicitly expected a timeline or progress bar when returning to the DD flow to check their status.</li>
-              <li><strong>Mental models:</strong> Users were bypassing the direct deposit screen entirely, going straight to the "Paycheck Advance" module to check their eligibility status. This highlighted a massive disconnect in our UX; users didn't mentally link the deposit action to the direct deposit hub.</li>
               <li><strong>Set up history:</strong> Users (and senior stakeholders) were confused by the set up history vs active payroll tracking. Since we didn't have attribution to connect a switch attempt with a landed deposit, the end-to-end flow was less useful, and a generic pending message made the most sense to cover all bases and provide clarity to the user.</li>
             </ul>
           </div>
@@ -132,8 +140,7 @@ export default function ProjectPage() {
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-16 md:mb-24">
-        <ProjectImage src="/placeholder.svg" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+        <ProjectImagePair left="/projects/current/current-dd-usability-1.webp" right="/projects/current/current-dd-usability-2.webp" />
       </ScrollReveal>
 
       {/* Case Study Block */}
@@ -166,23 +173,30 @@ export default function ProjectPage() {
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-16 md:mb-24">
-        <ProjectImage src="/placeholder.svg" />
-        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />
+        <ProjectImage src="/projects/current/current-dd-states-1.webp" />
+        <ProjectImage src="/projects/current/current-dd-states-2.webp" />
+        {/*add videos of final solution
+        <ProjectImagePair left="/placeholder.svg" right="/placeholder.svg" />*/}
       </ScrollReveal>
 
       {/* Case Study Block */}
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
-          <Eyebrow>Outcomes</Eyebrow>
+          <Eyebrow>Outcome</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.1]">
-            Results &amp; alignment
+            What did we achieve?
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
           <div className="flex flex-col gap-4">
-            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
-              Duplicate switches saw a 60% decrease in users with duplicative switches between variant and control. Payroll conversion saw a 10% relative lift.
-            </p>
+            <div className="border-l-4 border-foreground/20 pl-6 py-2">
+              <h4 className="text-foreground font-bold text-xl mb-2">60% reduction in duplicate switches</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium"> Between variant and control, duplicate switches were down to 2k per week from 6-7k prior to experience launch<br /></p><br />
+            </div>
+            <div className="border-l-4 border-foreground/20 pl-6 py-2">
+              <h4 className="text-foreground font-bold text-xl mb-2">3% payroll conversion lift</h4>
+              <p className="text-foreground/70 text-base md:text-lg font-medium">A less than ideal result, but an improvement nonetheless and a sign we were headed in the right direction.<br /></p><br />
+            </div>
           </div>
         </div>
       </ScrollReveal>

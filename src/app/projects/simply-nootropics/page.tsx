@@ -13,7 +13,12 @@ export default function ProjectPage() {
 
       {/* Editable Top Hero Layout */}
       <HeroReveal className="w-full px-4 md:px-8 xl:px-[12%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
-        <ProjectSwitcher currentSlug="simply-nootropics" />
+        <div className="flex w-full items-center justify-between">
+          <ProjectSwitcher currentSlug="simply-nootropics" />
+          <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
+            2020
+          </div>
+        </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I led the foundational branding and web efforts that helped scale Simply Nootropics from a niche startup to a $30M+ multi-category brand
         </h1>

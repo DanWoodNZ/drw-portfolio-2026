@@ -14,7 +14,7 @@ export default function Home() {
         <HeroGrid />
 
         <h1 className="relative z-10 text-5xl md:text-[80px] font-semibold leading-[1.2] tracking-tight max-w-[1400px] pointer-events-none select-none">
-          I’m Dan Wood <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2"><Image src="/hand.png" fill className="object-contain" alt="Wave" /></span> a product design lead based in NYC <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2"><Image src="/apple.png" fill className="object-contain" alt="Apple" /></span> building the future of banking at Current <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2"><Image src="/cash.png" fill className="object-contain" alt="Cash" /></span>
+          I’m Dan Wood <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2 pointer-events-auto group"><Image src="/hand.png" fill className="object-contain transition-transform origin-[70%_80%] group-hover:animate-wave" alt="Wave" /></span> a product design lead based in NYC <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2 pointer-events-auto group"><Image src="/apple.png" fill className="object-contain transition-transform duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:scale-150 group-hover:-rotate-6" alt="Apple" /></span> building the future of banking at Current <span className="inline-block relative w-[1.1em] h-[1.1em] align-middle -mt-[0.1em] mx-2 pointer-events-auto group"><Image src="/cash.png" fill className="object-contain transition-transform duration-700 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:rotate-[360deg] group-hover:scale-110" alt="Cash" /></span>
         </h1>
       </div>
 
@@ -33,8 +33,9 @@ export default function Home() {
         ))}
       </div>
 
+      {/*
       <div className="w-full px-4 md:px-8 xl:px-[12%] pb-32">
-        <h3 className="text-2xl font-semibold mb-10">Visual Feed</h3>
+        <h3 className="text-5xl font-semibold mb-10">Visual Feed</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[20px]">
           {Array.from({ length: 10 }).map((_, i) => (
             <div
@@ -44,11 +45,11 @@ export default function Home() {
               <span className="text-foreground/20 text-xs font-semibold uppercase tracking-widest text-center px-4">
                 Feed Item {i + 1}
               </span>
-              {/* Add an <Image /> tag here to replace the background block */}
+              {/* Add an <Image /> tag here to replace the background block 
             </div>
           ))}
         </div>
-      </div>
+      </div>*/}
 
       <Footer />
     </main>
