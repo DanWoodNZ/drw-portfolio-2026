@@ -34,33 +34,33 @@ export function FloatingNextProject({ slug, title, imageSrc }: FloatingNextProje
   useMotionValueEvent(scrollY, "change", (latest) => {
     const delta = latest - lastYRef.current;
     let newVisible = visible;
-    
+
     // Scrolling Down
     if (delta > 0) {
       if (accumulatorRef.current < 0) accumulatorRef.current = 0;
       accumulatorRef.current += delta;
-      
+
       if (accumulatorRef.current > 40 || latest <= 300) {
         newVisible = false;
       }
-    } 
+    }
     // Scrolling Up
     else if (delta < 0) {
       if (accumulatorRef.current > 0) accumulatorRef.current = 0;
       accumulatorRef.current += delta;
-      
+
       if (accumulatorRef.current < -150 && latest > 300) {
         newVisible = true;
       }
     }
-    
+
     if (latest <= 300) newVisible = false;
-    
+
     setVisible(newVisible);
     lastYRef.current = latest;
 
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    
+
     if (newVisible) {
       timeoutRef.current = setTimeout(() => {
         setVisible(false);
@@ -81,27 +81,26 @@ export function FloatingNextProject({ slug, title, imageSrc }: FloatingNextProje
     <AnimatePresence>
       {visible && (
         <motion.div
-           initial={{ opacity: 0, y: 50, scale: 0.9 }}
-           animate={{ opacity: 1, y: 0, scale: 1 }}
-           exit={{ opacity: 0, y: 50, scale: 0.9 }}
-           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-           className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-40"
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 50, scale: 0.9 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed bottom-6 left-6 right-6 md:left-auto md:w-auto md:bottom-10 md:right-10 z-40"
         >
-          <Link 
-            href={`/projects/${slug}`} 
-            className="group flex items-center bg-background/90 backdrop-blur-xl border border-foreground/8 rounded-full p-4 pr-10 md:pr-12 shadow-2xl hover:border-foreground/15 transition-all hover:scale-105 active:scale-95"
+          <Link
+            href={`/projects/${slug}`}
+            className="group flex w-full md:w-auto items-center justify-between bg-background/90 backdrop-blur-xl border border-foreground/8 rounded-full h-[72px] md:h-[80px] p-2 pr-6 md:p-3 md:pr-10 hover:border-foreground/15 transition-all hover:scale-[1.02] active:scale-95"
           >
-            <div 
+            <div
               style={{ viewTransitionName: `project-thumb-${slug}` }}
-              className="w-14 h-14 md:w-16 md:h-16 relative rounded-full overflow-hidden bg-foreground/5 mr-4 md:mr-6 shrink-0 shadow-inner"
+              className="w-14 h-14 relative rounded-full overflow-hidden bg-foreground/5 mr-4 md:mr-6 shrink-0 shadow-inner"
             >
-               {imageSrc && <Image src={imageSrc} fill className="object-cover" alt="Next Project" priority />}
+              {imageSrc && <Image src={imageSrc} fill className="object-cover" alt="Next Project" priority />}
             </div>
-            <div className="flex flex-col justify-center mr-6">
-              <span className="text-[10px] md:text-xs text-foreground/50 uppercase tracking-widest font-bold">Next Project</span>
-              <span className="text-base md:text-lg font-semibold text-foreground whitespace-nowrap mt-[2px]">{displayTitle}</span>
+            <div className="flex flex-col justify-center mr-4 md:mr-6 flex-1 text-left">
+              <span className="text-base md:text-lg font-semibold text-foreground truncate">{displayTitle}</span>
             </div>
-            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-foreground/70 transition-transform group-hover:translate-x-2" strokeWidth={2} />
+            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 shrink-0 text-foreground/70 transition-transform group-hover:translate-x-2" strokeWidth={2} />
           </Link>
         </motion.div>
       )}

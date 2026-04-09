@@ -12,7 +12,7 @@ export default function ProjectPage() {
     <ProjectLayout slug="simply-nootropics">
 
       {/* Editable Top Hero Layout */}
-      <HeroReveal className="w-full px-4 md:px-8 xl:px-[12%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="simply-nootropics" />
           <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
@@ -25,7 +25,7 @@ export default function ProjectPage() {
       </HeroReveal>
 
       {/* Editable Primary Hero Image */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-20">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] mb-10">
         <img
           src="/pt-simply-nootropics.webp"
           alt="Elevating cognitive wellness."
@@ -34,8 +34,8 @@ export default function ProjectPage() {
         />
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Design goals</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -47,18 +47,25 @@ export default function ProjectPage() {
             The objective for Simply Nootropics was to establish a premium market position while prioritizing consumer education. Given the emerging nature of the nootropics category in New Zealand, I designed a high-fidelity user experience focused on clarity and trust. My goal was to demystify the product for new customers through an informative, guided journey that converted curiosity into confidence and sales.
           </p>
         </div>
-      </ScrollReveal>
+      </ScrollReveal>*/}
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
         <ProjectImage src="/projects/simply/simply-1.webp" />
         <ProjectImage src="/projects/simply/simply-2.webp" />
         <ProjectImage src="/projects/simply/simply-3.webp" />
         <ProjectImage src="/projects/simply/simply-4.webp" />
         <ProjectImage src="/projects/simply/simply-5.webp" />
+        <ProjectImage src="/projects/simply/simply-6.webp" />
+        <ProjectImage src="/projects/simply/simply-7.webp" />
+        <ProjectImagePair left="/projects/simply/simply-8.webp" right="/projects/simply/simply-9.webp" />
+        <ProjectImage src="/projects/simply/simply-10.webp" />
+        <ProjectImage src="/projects/simply/simply-11.webp" />
+        <ProjectImagePair left="/projects/simply/simply-12.webp" right="/projects/simply/simply-13.webp" />
+        <ProjectImagePair left="/projects/simply/simply-14.webp" right="/projects/simply/simply-15.webp" />
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Storytelling</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -72,15 +79,15 @@ export default function ProjectPage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
         <ProjectImage src="/projects/simply/simply-6.webp" />
         <ProjectImage src="/projects/simply/simply-7.webp" />
         <ProjectImagePair left="/projects/simply/simply-8.webp" right="/projects/simply/simply-9.webp" />
         <ProjectImage src="/projects/simply/simply-10.webp" />
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Brand identity</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -94,13 +101,13 @@ export default function ProjectPage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
         <ProjectImage src="/projects/simply/simply-11.webp" />
 
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block 
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Packaging</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -114,14 +121,14 @@ export default function ProjectPage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
         <ProjectImagePair left="/projects/simply/simply-12.webp" right="/projects/simply/simply-13.webp" />
         <ProjectImagePair left="/projects/simply/simply-14.webp" right="/projects/simply/simply-15.webp" />
-      </ScrollReveal>
+      </ScrollReveal>*/}
 
 
       {/* Editable Project Credits */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-20 mt-10">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-20 mt-10">
         <div className="flex flex-col border-t border-foreground/10 pt-16">
           <h2 className="text-4xl font-semibold mb-12">Credits</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-6">

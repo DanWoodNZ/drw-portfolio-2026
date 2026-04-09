@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     slug: "kismet",
     title: "Transforming Kismet’s booking ecosystem.",
-    description: "Redesigned the internal and external booking systems and launched the foundation for the upcoming marketplace and website.",
+    description: "Redesigned the internal and external booking systems and went 0→1 golf event marketplace.",
     imageSrc: "/pt-kismet.webp",
     companyLogo: "/icons/icon-kismet.png",
     companyName: "Kismet",
@@ -95,8 +95,8 @@ export const projects: Project[] = [
 
   {
     slug: "simply-nootropics",
-    title: "Simply Nootropics",
-    description: "Simply Nootropics is a leading nootropics brand operating out of New Zealand/Australia.",
+    title: "Foundational branding for health and wellness.",
+    description: "Led branding and design that helped scale Simply Nootropics from a niche startup into a $30M+ multi-category brand.",
     imageSrc: "/pt-simply-nootropics.webp",
     companyLogo: "/icons/icon-simply.png",
     companyName: "Simply Nootropics",

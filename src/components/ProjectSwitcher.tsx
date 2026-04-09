@@ -53,9 +53,8 @@ export function ProjectSwitcher({ currentSlug }: ProjectSwitcherProps) {
     <div ref={ref} className="relative inline-flex">
       {/* ── Trigger ── */}
       <button
-        className={`flex items-center gap-4 cursor-pointer select-none px-3 py-2.5 -mx-3 -my-2.5 rounded-[18px] transition-colors duration-150 ${
-          open || hovered ? "bg-foreground/[0.06]" : "bg-transparent"
-        }`}
+        className={`flex items-center gap-4 cursor-pointer select-none px-3 py-2.5 -mx-3 -my-2.5 rounded-[18px] transition-colors duration-150 ${open || hovered ? "bg-foreground/[0.06]" : "bg-transparent"
+          }`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onClick={() => setOpen((v) => !v)}
@@ -76,11 +75,11 @@ export function ProjectSwitcher({ currentSlug }: ProjectSwitcherProps) {
 
         {/* Name + subtitle */}
         <div className="flex flex-col justify-center text-left">
-          <h4 className="text-lg md:text-xl font-extrabold text-foreground tracking-wide leading-tight">
+          <h4 className="text-lg md:text-xl font-extrabold text-foreground tracking-small leading-tight">
             {current.companyName}
           </h4>
           {current.companySubtitle && (
-            <p className="text-foreground/50 text-sm font-medium tracking-wide mt-0.5">
+            <p className="text-foreground/50 text-lg font-medium tracking-small mt-0.5">
               {current.companySubtitle}
             </p>
           )}

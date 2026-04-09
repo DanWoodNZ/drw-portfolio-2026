@@ -75,8 +75,8 @@ export default function About() {
       <NavBar />
 
       {/* Intro section */}
-      <div className="pt-20 pb-24 px-4 md:px-8 xl:px-[12%]">
-        <h1 className="text-5xl md:text-[80px] font-semibold leading-[1.2] tracking-tight max-w-[1400px] mb-24">
+      <div className="pt-20 pb-24 px-4 md:px-8 xl:px-[4%]">
+        <h1 className="text-4xl md:text-[64px] font-semibold leading-[1.2] tracking-tight max-w-[1400px] mb-24">
           15 years of creative problem solving. Currently focused on the future of banking and the chaos of a toddler.
         </h1>
 
@@ -116,7 +116,7 @@ export default function About() {
 
           {/* Photo */}
           <div className="w-full lg:w-[40%]">
-            <div className="w-full aspect-[4/5] bg-foreground/5 rounded-[32px] border border-foreground/5 flex items-center justify-center relative overflow-hidden">
+            <div className="w-full aspect-[4/5] bg-foreground/5 rounded-[16px] md:rounded-[20px] border border-foreground/5 flex items-center justify-center relative overflow-hidden">
               <Image src="/dan-profile.jpg" alt="Dan Wood" fill className="object-cover" />
             </div>
           </div>
@@ -124,35 +124,23 @@ export default function About() {
       </div>
 
       {/* Work History — Timeline */}
-      <div className="w-full px-4 md:px-8 xl:px-[12%] mb-40">
+      <div className="w-full px-4 md:px-8 xl:px-[4%] mb-40">
         <h2 className="text-4xl font-semibold mb-16">Work history</h2>
 
         <div className="flex flex-col gap-3">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative group border border-foreground/6 rounded-[24px] p-6 md:p-8">
-
-              {/* Logo — mobile only, absolutely top-right with padding-matching margin */}
-              <div className="sm:hidden absolute top-6 right-6 w-14 h-14 shrink-0 bg-[#0A0A0A] border border-transparent dark:border-foreground/10 rounded-xl flex items-center justify-center overflow-hidden">
-                {exp.logo && (
-                  <Image
-                    src={exp.logo}
-                    alt={`${exp.company} Logo`}
-                    fill
-                    className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                  />
-                )}
-              </div>
+            <div key={index} className="relative group border border-foreground/6 rounded-[16px] md:rounded-[20px] p-6 md:p-8">
 
               <div className="flex flex-col sm:flex-row gap-6 md:gap-8 items-start sm:items-center">
 
-                {/* Logo — desktop (sm+) only, sits left */}
-                <div className="hidden sm:flex sm:w-24 sm:h-24 md:w-[110px] md:h-[110px] shrink-0 bg-[#0A0A0A] border border-transparent dark:border-foreground/10 rounded-2xl md:rounded-[24px] items-center justify-center relative overflow-hidden self-start">
+                {/* Logo — stacks on mobile, sits left on desktop */}
+                <div className="flex w-14 h-14 sm:w-24 sm:h-24 md:w-[110px] md:h-[110px] shrink-0 bg-[#0A0A0A] border border-transparent dark:border-foreground/10 rounded-[12px] sm:rounded-[16px] md:rounded-[20px] items-center justify-center relative overflow-hidden self-start">
                   {exp.logo && (
                     <Image
                       src={exp.logo}
                       alt={`${exp.company} Logo`}
                       fill
-                      className="object-contain p-5 md:p-6 transition-transform duration-300 group-hover:scale-105"
+                      className="object-contain p-3 sm:p-5 md:p-6 transition-transform duration-300 group-hover:scale-105"
                     />
                   )}
                 </div>
@@ -187,7 +175,7 @@ export default function About() {
       </div>
 
       {/* Bag of tricks */}
-      <div className="w-full px-4 md:px-8 xl:px-[12%] pb-40">
+      <div className="w-full px-4 md:px-8 xl:px-[4%] pb-40">
         <h2 className="text-4xl font-semibold mb-12">My bag of tricks</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {skills.map((skill, index) => (
@@ -197,7 +185,7 @@ export default function About() {
       </div>
 
       {/* Photography 
-      <div className="w-full px-4 md:px-8 xl:px-[12%] pb-40">
+      <div className="w-full px-4 md:px-8 xl:px-[4%] pb-40">
         <h2 className="text-4xl font-semibold mb-12">Snaps 📸</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="w-full aspect-[4/3] bg-foreground/5 rounded-[32px] border border-foreground/5 flex items-center justify-center relative overflow-hidden">

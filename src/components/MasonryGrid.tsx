@@ -37,7 +37,7 @@ export function MasonryGrid({ images }: MasonryGridProps) {
         <div key={idx} className="flex flex-col gap-6 lg:gap-10 w-full">
           {/* Row 1: Full width rectangle */}
           {block[0] && (
-            <div className="w-full aspect-[16/9] lg:aspect-[21/9] rounded-[24px] md:rounded-[40px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
+            <div className="w-full aspect-[16/9] lg:aspect-[21/9] rounded-[16px] md:rounded-[20px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
               <MediaBlock src={block[0]} />
             </div>
           )}
@@ -46,12 +46,12 @@ export function MasonryGrid({ images }: MasonryGridProps) {
           {(block[1] || block[2]) && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 w-full">
               {block[1] && (
-                <div className="w-full aspect-square rounded-[24px] md:rounded-[40px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
+                <div className="w-full aspect-square rounded-[16px] md:rounded-[20px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
                   <MediaBlock src={block[1]} />
                 </div>
               )}
               {block[2] && (
-                <div className="w-full aspect-square rounded-[24px] md:rounded-[40px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
+                <div className="w-full aspect-square rounded-[16px] md:rounded-[20px] overflow-hidden relative bg-[#0A0A0A] flex items-center justify-center">
                   <MediaBlock src={block[2]} />
                 </div>
               )}

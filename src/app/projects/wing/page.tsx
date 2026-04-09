@@ -13,7 +13,7 @@ export default function ProjectPage() {
     <ProjectLayout slug="wing">
 
       {/* Editable Top Hero Layout */}
-      <HeroReveal className="w-full px-4 md:px-8 xl:px-[12%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="wing" />
           <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
@@ -26,7 +26,7 @@ export default function ProjectPage() {
       </HeroReveal>
 
       {/* Editable Primary Hero Image */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] mb-20">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] mb-10">
         <img
           src="/pt-wing.webp"
           alt="Elevating cognitive wellness."
@@ -35,8 +35,8 @@ export default function ProjectPage() {
         />
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Design direction</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -48,10 +48,10 @@ export default function ProjectPage() {
             Wing Bikes have a sleek, premium look and feel. The existing digital experience did not deliver the same level of quality users felt when test riding or viewing in person. Seth wanted the digital experience to match the design and experience of the real thing.
           </p>
         </div>
-      </ScrollReveal>
+      </ScrollReveal> */}
 
       {/* Before / After */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-10 md:pb-10">
         <BeforeAfter
           beforeSrc="/projects/wing/wing-before.webp"
           afterSrc="/projects/wing/wing-after.webp"
@@ -62,7 +62,7 @@ export default function ProjectPage() {
         />
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-10 md:pb-10">
         {/* Full-width image */}
         <ProjectImage src="/projects/wing/wing-3.webp" alt="Wing storefront" />
         <ProjectImage src="/projects/wing/wing-4.webp" alt="Wing storefront" />
@@ -70,8 +70,8 @@ export default function ProjectPage() {
         <ProjectImage src="/projects/wing/wing-6.webp" alt="Wing storefront" />
       </ScrollReveal>
 
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      {/* Case Study Block
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
           <Eyebrow>Mobile experience</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
@@ -83,9 +83,9 @@ export default function ProjectPage() {
             Our research found that 72% of all Wing customers were experiencing the website from a mobile device. We paid extra attention to the flow and usability of the mobile experience to ensure the visual hierarchy made sense and invited users to explore and learn.
           </p>
         </div>
-      </ScrollReveal>
+      </ScrollReveal> */}
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-10 md:pb-10">
         {/* Full-width image */}
         <ProjectImage src="/projects/wing/wing-7.webp" alt="Wing storefront" />
         <ProjectImage src="/projects/wing/wing-8.webp" alt="Wing storefront" />
@@ -93,7 +93,7 @@ export default function ProjectPage() {
 
 
       {/* Editable Project Credits */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[12%] pb-20 mt-10">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-20 mt-10">
         <div className="flex flex-col border-t border-foreground/10 pt-16">
           <h2 className="text-4xl font-semibold mb-12">Credits</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-6">

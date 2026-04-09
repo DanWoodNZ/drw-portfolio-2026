@@ -15,7 +15,7 @@ function Media({ src, alt }: { src: string; alt?: string }) {
         loop
         muted
         playsInline
-        className="w-full h-auto rounded-[20px] md:rounded-[32px]"
+        className="w-full h-auto rounded-[16px] md:rounded-[20px]"
       />
     );
   }
@@ -26,7 +26,7 @@ function Media({ src, alt }: { src: string; alt?: string }) {
     <img
       src={src}
       alt={alt ?? "Project image"}
-      className="w-full h-auto rounded-[20px] md:rounded-[32px] block"
+      className="w-full h-auto rounded-[16px] md:rounded-[20px] block"
     />
   );
 }
@@ -61,7 +61,7 @@ export function ProjectImagePair({
   altRight?: string;
 }) {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-10">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-10 mb-6 lg:mb-10">
       <Media src={left} alt={altLeft} />
       <Media src={right} alt={altRight} />
     </div>

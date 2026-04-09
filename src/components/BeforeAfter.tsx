@@ -91,7 +91,7 @@ export function BeforeAfter({
   // ── Render ────────────────────────────────────────────────────────────────────
 
   return (
-    <div className="relative w-full rounded-[20px] md:rounded-[36px] overflow-hidden bg-foreground/5">
+    <div className="relative w-full rounded-[16px] md:rounded-[20px] overflow-hidden bg-foreground/5">
       <div className="relative w-full">
 
         {/*
@@ -136,25 +136,25 @@ export function BeforeAfter({
 
         {/* ── Segmented controller ── */}
         <div className="absolute top-4 left-4 z-10">
-          <div className="flex items-center gap-1 bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-[14px] p-1">
+          <div className="flex items-center gap-1 bg-background/80 backdrop-blur-xl border border-foreground/10 rounded-[10px] p-1">
             {labels.map((label, idx) => {
               const isActive = active === idx;
               return (
                 <button
                   key={idx}
                   onClick={() => handleSelect(idx as 0 | 1)}
-                  className="relative overflow-hidden rounded-[10px] px-4 py-1.5 text-sm font-semibold transition-colors duration-150 select-none"
+                  className="relative overflow-hidden rounded-[8px] px-4 py-1.5 text-sm font-semibold transition-colors duration-150 select-none"
                 >
                   {isActive && (
                     <motion.div
                       layoutId="segment-bg"
-                      className="absolute inset-0 bg-foreground/10 rounded-[10px]"
+                      className="absolute inset-0 bg-foreground/10 rounded-[8px]"
                       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                     />
                   )}
                   {isActive && !paused && (
                     <motion.div
-                      className="absolute inset-0 rounded-[10px] origin-left bg-foreground/[0.08]"
+                      className="absolute inset-0 rounded-[8px] origin-left bg-foreground/[0.08]"
                       style={{ scaleX: progress }}
                     />
                   )}

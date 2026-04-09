@@ -21,7 +21,7 @@ function SocialIcon({ href, src, darkSrc, alt }: { href: string; src: string; da
 
 export function Footer() {
   return (
-    <footer className="w-full px-4 md:px-8 xl:px-[12%] py-12 md:py-24 flex justify-center items-center">
+    <footer className="w-full px-4 md:px-8 xl:px-[4%] py-12 md:py-24 flex justify-center items-center">
       <div className="flex items-center space-x-12">
         <SocialIcon href="https://www.dribbble.com/danrobertwood"   src="/icons/icon-dribble.svg"   darkSrc="/icons/icon-dribble-dark.svg"   alt="Dribbble"   />
         <SocialIcon href="https://www.linkedin.com/in/danrobertwood" src="/icons/icon-linkedin.svg"  darkSrc="/icons/icon-linkedin-dark.svg"  alt="LinkedIn"   />

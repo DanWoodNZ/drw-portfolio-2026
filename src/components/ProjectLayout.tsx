@@ -17,7 +17,7 @@ export function ProjectLayout({ slug, children }: { slug: string, children: Reac
   const nextProject = projects[nextProjectIndex];
 
   return (
-    <main className="min-h-screen bg-background text-foreground selection:bg-foreground/30 overflow-x-hidden">
+    <main className="min-h-screen bg-background text-foreground selection:bg-foreground/30">
       <NavBar />
 
       {/* Custom Content Render Slot - This pipes in all your explicit page layout HTML exactly! */}

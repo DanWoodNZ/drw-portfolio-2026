@@ -31,8 +31,8 @@ export function NavBar() {
       if (accumulatorRef.current < 0) accumulatorRef.current = 0;
       accumulatorRef.current += delta;
 
-      // Keep on screen much longer before hiding: past 600px
-      if (accumulatorRef.current > 40 && latest > 600) {
+      // Keep on screen much longer before hiding: past 430px
+      if (accumulatorRef.current > 40 && latest > 430) {
         if (!isOpen) newNavVisible = false;
       }
     }
@@ -118,7 +118,7 @@ export function NavBar() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
-      className="flex items-center p-[4px] rounded-full border border-foreground/8 bg-transparent transition-colors hover:border-foreground/15 cursor-pointer"
+      className="flex items-center h-10 p-1 rounded-full border border-foreground/8 bg-transparent transition-colors hover:border-foreground/15 cursor-pointer"
     >
       <div className={`p-2 rounded-full transition-colors duration-300 ${theme === 'dark' ? 'bg-foreground/20' : 'opacity-30'}`}>
         <Moon className="w-4 h-4 md:w-5 md:h-5 text-foreground" strokeWidth={1.5} />
@@ -137,11 +137,11 @@ export function NavBar() {
           initial={{ y: 0 }}
           animate={{ y: navVisible ? 0 : "-150%" }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className={`fixed top-0 left-0 right-0 z-[60] flex justify-center w-full transition-all duration-500 ease-out ${isScrolled ? "pt-4 px-4 sm:pt-6 sm:px-6 md:px-10 lg:px-[10%]" : "pt-0 px-0"}`}
+          className={`fixed top-0 left-0 right-0 z-[60] flex justify-center w-full transition-all duration-500 ease-out ${isScrolled ? "pt-4 px-4 sm:pt-6 sm:px-6 md:px-10 xl:px-[4%]" : "pt-0 px-0"}`}
         >
           <header className={`flex justify-between items-center transition-all duration-500 ease-out border ${isScrolled
-            ? `w-full h-[72px] md:h-[80px] px-4 md:px-5 bg-background/80 backdrop-blur-xl rounded-full shadow-lg ${isOpen ? 'border-transparent' : 'border-foreground/8'}`
-            : "w-full px-4 md:px-8 xl:px-[12%] py-10 h-[120px] bg-background border-transparent"
+            ? `w-full h-[72px] md:h-[80px] px-4 md:px-5 bg-background/80 backdrop-blur-xl rounded-full ${isOpen ? 'border-transparent' : 'border-foreground/8'}`
+            : "w-full px-4 md:px-8 xl:px-[4%] py-10 h-[120px] bg-background border-transparent"
             }`}
           >
             {/* Left: Constant Logo Matrix */}
@@ -150,7 +150,7 @@ export function NavBar() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 12 }}
                   transition={{ duration: 0.15, ease: "easeOut" }}
-                  className="relative w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center cursor-pointer"
+                  className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center cursor-pointer"
                 >
                   <Image
                     src="/icons/icon-logo.png"
@@ -175,7 +175,7 @@ export function NavBar() {
                 href="mailto:danrobertwood@gmail.com?subject=Portfolio%20Message"
                 className="hover:text-foreground/70 transition-colors"
               >
-                Say Hi 👋
+                Say Hi
               </a>
             </nav>
 
@@ -193,7 +193,7 @@ export function NavBar() {
               {/* Framer conditional loop actively syncing exact Menu vs Close hooks */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden flex items-center justify-center p-3 rounded-full border border-foreground/8 bg-transparent text-foreground hover:bg-foreground/5 transition-colors cursor-pointer"
+                className="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-foreground/8 bg-transparent text-foreground hover:bg-foreground/5 transition-colors cursor-pointer"
                 aria-label="Toggle Menu"
               >
                 {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

@@ -23,10 +23,10 @@ export default function RootLayout({
     <ViewTransitions>
       <html
         lang="en"
-        className={`${instrumentSans.variable} h-full antialiased`}
+        className={`${instrumentSans.variable} antialiased`}
         suppressHydrationWarning
       >
-        <body className="min-h-full flex flex-col font-sans font-medium bg-background text-foreground transition-colors duration-500">
+        <body className="flex flex-col font-sans font-medium bg-background text-foreground transition-colors duration-500 overflow-x-hidden max-w-[100vw]">
            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
              {children}
            </ThemeProvider>
