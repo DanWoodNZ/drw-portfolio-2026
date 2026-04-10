@@ -14,20 +14,21 @@ export default function ProjectPage() {
     <ProjectLayout slug="quimbee">
 
       {/* Editable Top Hero Layout */}
-      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-8 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="quimbee" />
-          <div className="rounded-full border border-foreground/10 px-3 py-1 text-sm font-semibold text-foreground/70">
-            2021
-          </div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I elevated core learning and assessment products, improving NPS empowering the next generation of top-tier legal talent.
         </h1>
+        <div className="text-md font-medium text-foreground/70">
+          Completed in 2021
+        </div>
         <div>
           <Link href={`/projects/quimbee/case-study`} className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-foreground/5 text-foreground font-semibold hover:scale-105 transition-transform duration-200 mt-2">
             📖&ensp;View case study
           </Link>
+
         </div>
       </HeroReveal>
 

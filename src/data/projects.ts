@@ -10,6 +10,7 @@ export type Project = {
   projectShortName?: string;
   projectRole?: string;
   heroText?: string;
+  year?: string;
   credits: { role: string; name: string }[];
 };
 
@@ -47,21 +48,6 @@ export const projects: Project[] = [
     ]
   },
   {
-    slug: "tmrw",
-    title: "Defining TMRW from day zero.",
-    description: "Led all branding efforts, creating the visual identity, marketing resources, brand guidelines, and the launch website.",
-    imageSrc: "/pt-tmrw.webp",
-    companyLogo: "/icons/icon-tmrw.png",
-    companyName: "TMRW",
-    companySubtitle: "Cutting edge longevity supplements",
-    projectRole: "Brand Art Direction",
-    heroText: "Defined the complete visual identity and marketing presence from day zero to launch.",
-    credits: [
-      { role: "Art Director", name: "Dan Wood" },
-      { role: "Copywriter", name: "Alex Johnson" },
-    ]
-  },
-  {
     slug: "kismet",
     title: "Transforming Kismet’s booking ecosystem.",
     description: "Redesigned the internal and external booking systems and went 0→1 golf event marketplace.",
@@ -74,6 +60,21 @@ export const projects: Project[] = [
     credits: [
       { role: "UX Lead", name: "Dan Wood" },
       { role: "Engineering Lead", name: "Michael Chang" },
+    ]
+  },
+  {
+    slug: "tmrw",
+    title: "Defining TMRW from day zero.",
+    description: "Led all branding efforts, creating the visual identity, marketing resources, brand guidelines, and the launch website.",
+    imageSrc: "/pt-tmrw.webp",
+    companyLogo: "/icons/icon-tmrw.png",
+    companyName: "TMRW",
+    companySubtitle: "Cutting edge longevity supplements",
+    projectRole: "Brand Art Direction",
+    heroText: "Defined the complete visual identity and marketing presence from day zero to launch.",
+    credits: [
+      { role: "Art Director", name: "Dan Wood" },
+      { role: "Copywriter", name: "Alex Johnson" },
     ]
   },
   {
@@ -94,33 +95,35 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "simply-nootropics",
-    title: "Foundational branding for health and wellness.",
-    description: "Led branding and design that helped scale Simply Nootropics from a niche startup into a $30M+ multi-category brand.",
-    imageSrc: "/pt-simply-nootropics.webp",
-    companyLogo: "/icons/icon-simply.png",
-    companyName: "Simply Nootropics",
-    companySubtitle: "Supplements for brain performance",
-    projectRole: "Design & Art Direction",
-    heroText: "Built the Simply Nootropics brand from the ground up, including branding, packaging, e-commerce web design, and photography.",
-    credits: [
-      { role: "Design Lead", name: "Dan Wood" },
-      { role: "Founder", name: "Anthony" },
-    ]
-  },
-  {
     slug: "wing",
     title: "Elevating cognitive wellness.",
     description: "Created a high-performance digital storefront and brand presence for a premium e-bike manufacturer.",
     imageSrc: "/pt-wing.webp",
     companyLogo: "/icons/icon-wing.png",
     companyName: "Wing",
-    companySubtitle: "Premium e-bikes based in NYC",
+    companySubtitle: "Premium NYC based e-bikes",
     projectRole: "Digital Designer",
     heroText: "Designed and deployed a massive digital storefront optimized completely for aesthetic edge and maximal e-commerce conversion.",
+    year: "2021",
     credits: [
       { role: "Digital Designer", name: "Dan Wood" },
       { role: "Brand Strategist", name: "Laura Palmer" },
+    ]
+  },
+  {
+    slug: "simply-nootropics",
+    title: "Foundational branding for health and wellness.",
+    description: "Led branding and design that helped scale Simply Nootropics from a niche startup into a $30M+ multi-category brand.",
+    imageSrc: "/pt-simply-nootropics.webp",
+    companyLogo: "/icons/icon-simply.png",
+    companyName: "Simply Nootropics",
+    companySubtitle: "Brain performance supplements",
+    projectRole: "Design & Art Direction",
+    heroText: "Built the Simply Nootropics brand from the ground up, including branding, packaging, e-commerce web design, and photography.",
+    year: "2020",
+    credits: [
+      { role: "Design Lead", name: "Dan Wood" },
+      { role: "Founder", name: "Anthony" },
     ]
   },
   {
@@ -130,9 +133,10 @@ export const projects: Project[] = [
     imageSrc: "/pt-mbw.webp",
     companyLogo: "/icons/icon-mbw.png",
     companyName: "MBW",
-    companySubtitle: "Professional leadership community",
+    companySubtitle: "Leadership community",
     projectRole: "Product & UX Design",
     heroText: "Built out the fundamental architecture for a private digital membership portal targeting authentic professional growth.",
+    year: "2019",
     credits: [
       { role: "UX Designer", name: "Dan Wood" },
       { role: "Creative Director", name: "James Holden" },

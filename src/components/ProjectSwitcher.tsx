@@ -79,7 +79,7 @@ export function ProjectSwitcher({ currentSlug }: ProjectSwitcherProps) {
             {current.companyName}
           </h4>
           {current.companySubtitle && (
-            <p className="text-foreground/50 text-lg font-medium tracking-small mt-0.5">
+            <p className="text-foreground/50 text-md font-medium tracking-small mt-0.5">
               {current.companySubtitle}
             </p>
           )}

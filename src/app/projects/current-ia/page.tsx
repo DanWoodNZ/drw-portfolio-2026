@@ -14,12 +14,9 @@ export default function ProjectPage() {
     <ProjectLayout slug="current-ia">
 
       {/* Editable Top Hero Layout */}
-      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-8 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="current-ia" />
-          <div className="rounded-full border border-foreground/10 px-3 py-1 text-sm font-medium text-foreground/70">
-            2025
-          </div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I overhauled an out-of-date information architecture for Current, improving feature discoverability and conversion.

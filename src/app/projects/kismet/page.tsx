@@ -10,16 +10,16 @@ export default function ProjectPage() {
     <ProjectLayout slug="kismet">
 
       {/* Editable Top Hero Layout */}
-      <div className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <div className="w-full px-4 md:px-8 xl:px-[4%] pt-8 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="kismet" />
-          <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
-            2025
-          </div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I helped prepare a next-generation golf event booking platform for seed-stage success by rethinking legacy booking flows
         </h1>
+        {/*<div className="text-md font-medium text-foreground/70">
+          Completed in 2025
+        </div>*/}
       </div>
 
       {/* Editable Primary Hero Image */}

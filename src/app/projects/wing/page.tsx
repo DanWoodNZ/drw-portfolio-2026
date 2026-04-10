@@ -13,16 +13,16 @@ export default function ProjectPage() {
     <ProjectLayout slug="wing">
 
       {/* Editable Top Hero Layout */}
-      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-32 flex flex-col gap-10">
+      <HeroReveal className="w-full px-4 md:px-8 xl:px-[4%] pt-16 lg:pt-24 pb-20 lg:pb-64 flex flex-col gap-10">
         <div className="flex w-full items-center justify-between">
           <ProjectSwitcher currentSlug="wing" />
-          <div className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/70">
-            2023
-          </div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.2] lg:leading-[1.1] max-w-6xl">
           I reimagined the digital storefront for Wing, with the aim of optimizing for aesthetic edge, education, and conversion.
         </h1>
+        <div className="text-md font-medium text-foreground/70">
+          Completed in 2022
+        </div>
       </HeroReveal>
 
       {/* Editable Primary Hero Image */}

@@ -1,6 +1,7 @@
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import { SkillCard } from "@/components/SkillCard";
+import { PhotoStack } from "@/components/PhotoStack";
 import Image from "next/image";
 
 export default function About() {
@@ -80,9 +81,9 @@ export default function About() {
           15 years of creative problem solving. Currently focused on the future of banking and the chaos of a toddler.
         </h1>
 
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
+        <div className="flex flex-col lg:flex-row gap-16">
           {/* Description */}
-          <div className="w-full lg:w-[60%] flex flex-col gap-16">
+          <div className="w-full lg:w-1/2 flex flex-col gap-16 lg:pr-10">
             <section className="flex flex-col gap-6">
               <h3 className="text-2xl md:text-3xl font-bold">A little about me</h3>
               <p className="text-foreground/70 text-lg md:text-xl leading-relaxed max-w-3xl">
@@ -97,27 +98,26 @@ export default function About() {
             <section className="flex flex-col gap-6">
               <h3 className="text-2xl md:text-3xl font-bold">My work now</h3>
               <p className="text-foreground/70 text-lg md:text-xl leading-relaxed max-w-3xl">
-                At Current I lead design on the primacy / growth team, managing a cross-platform design
-                system while optimizing the high-stakes flows of onboarding and direct deposit. By balancing
-                rigorous systems thinking with strategic information architecture, i&apos;ve helped turn complex
-                financial friction into intuitive, discoverable experiences that drive both user trust and
-                business growth.
-              </p>
-              <p className="text-foreground/70 text-lg md:text-xl leading-relaxed max-w-3xl">
-                An unsung part of my role is ensuring our design process is as powerful as the products
-                we build. I upleveled our design system by introducing complex variables with primitives
-                and semantic naming for better code parity, resulting in less time spent on design system
-                questions in the delivery phase, while keeping output clean and accurate. Beyond what&apos;s
-                actually shipped to users, I also focus on reducing friction by streamlining our asset
-                pipelines, and have been experimenting with vibe coding AI tools for asset creation.
+                I lead design on the growth team at Current, focusing on high-stakes flows like onboarding and direct deposit. I spend my time turning complex financial friction into intuitive experiences. Lately, I’ve been upleveling our design system with semantic variables for better code parity and experimenting with vibe coding to speed up our asset pipelines.
               </p>
             </section>
           </div>
 
           {/* Photo */}
-          <div className="w-full lg:w-[40%]">
-            <div className="w-full aspect-[4/5] bg-foreground/5 rounded-[16px] md:rounded-[20px] border border-foreground/5 flex items-center justify-center relative overflow-hidden">
-              <Image src="/dan-profile.jpg" alt="Dan Wood" fill className="object-cover" />
+          <div className="w-full lg:w-1/2 flex items-center justify-center p-4 lg:p-4 xl:p-4">
+            <div className="w-full max-w-[500px] xl:max-w-[500px]">
+              <PhotoStack
+                images={[
+                  "/about/about-1.webp",
+                  "/about/about-2.webp",
+                  "/about/about-3.webp",
+                  "/about/about-4.webp",
+                  "/about/about-5.webp",
+                  "/about/about-6.webp",
+                  "/about/about-7.webp",
+                  "/about/about-8.webp"
+                ]}
+              />
             </div>
           </div>
         </div>
