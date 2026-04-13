@@ -53,7 +53,7 @@ export function ProjectSwitcher({ currentSlug }: ProjectSwitcherProps) {
     <div ref={ref} className="relative inline-flex">
       {/* ── Trigger ── */}
       <button
-        className={`flex items-center gap-4 cursor-pointer select-none px-3 py-2.5 -mx-3 -my-2.5 rounded-[18px] transition-colors duration-150 ${open || hovered ? "bg-foreground/[0.06]" : "bg-transparent"
+        className={`flex items-center gap-4 cursor-pointer select-none px-3 py-2.5 -mx-3 -my-2.5 rounded-[18px]  transition-colors duration-150 ${open || hovered ? "bg-foreground/[0.06]" : "bg-transparent"
           }`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -79,7 +79,7 @@ export function ProjectSwitcher({ currentSlug }: ProjectSwitcherProps) {
             {current.companyName}
           </h4>
           {current.companySubtitle && (
-            <p className="text-foreground/50 text-md font-medium tracking-small mt-0.5">
+            <p className="text-foreground/50 text- font-medium tracking-small mt-0.5">
               {current.companySubtitle}
             </p>
           )}

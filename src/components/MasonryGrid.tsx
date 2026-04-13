@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CustomVideoPlayer } from "./CustomVideoPlayer";
 
 interface MasonryGridProps {
   images: string[];
@@ -9,13 +10,10 @@ function MediaBlock({ src }: { src: string }) {
 
   if (isVideo) {
     return (
-      <video
+      <CustomVideoPlayer 
         src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover absolute inset-0"
+        containerClassName="w-full h-full absolute inset-0"
       />
     );
   }

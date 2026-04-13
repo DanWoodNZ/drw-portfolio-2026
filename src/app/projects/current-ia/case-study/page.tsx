@@ -33,7 +33,7 @@ export default function ProjectPage() {
 
 
       {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-32 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
+      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[100%] flex flex-col gap-6">
           <div className="flex flex-col gap-4">
             <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-5xl">
@@ -158,9 +158,9 @@ export default function ProjectPage() {
       {/* Case Study Block */}
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
-          <Eyebrow>Strategy</Eyebrow>
+          <Eyebrow>Cleanup & Consolidation</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
-            Phase 1 (Cleanup)
+            Phase 1
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
@@ -168,44 +168,23 @@ export default function ProjectPage() {
             <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
               Stripped out duplicate entry points across the Transfer and Account tabs to reduce clutter. We decided to move to 100% immediately without a feature flag based on stakeholder agreement and research findings.
             </p>
-          </div>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
-        <ProjectImage src="/projects/current/current-ia-phase-1.webp" />
-      </ScrollReveal>
-
-      {/* Case Study Block */}
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
-        <div className="w-full lg:w-[40%]">
-          <Eyebrow>Strategy</Eyebrow>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
-            Phase 2 (Consolidation)
-          </h2>
-        </div>
-        <div className="w-full lg:w-[60%] flex flex-col gap-6">
-          <div className="flex flex-col gap-4">
             <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
               Deprecated the Services tab entirely. Rebuilt the Overview screen with new card components, an animated referral entry point, and immediate visibility into spending balances, Paycheck Advance, and Overdraft. This was rolled out to 10% for monitoring, before an eventual full release after positive sentiment and metrics.
             </p>
-            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
-              An important note here is the bigger swing of transparency. We had never previously exposed limits for liquidity features at the tab level, and a point of contention between stakeholders was the risk of negative user sentiment in regard to fluctuating Paycheck Advance limits.
-            </p>
           </div>
         </div>
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
-        <ProjectImage src="/projects/current/current-ia-phase-2.webp" />
+        <ProjectImage src="/projects/current/current-ia-phase-1.webm" />
       </ScrollReveal>
 
       {/* Case Study Block */}
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
-          <Eyebrow>Strategy</Eyebrow>
+          <Eyebrow>Expansion</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
-            Phase 3 (Expansion)
+            Phase 2
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
@@ -218,16 +197,14 @@ export default function ProjectPage() {
       </ScrollReveal>
 
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
-        <ProjectImage src="/projects/current/current-ia-phase-3.webp" />
-        <ProjectImage src="/projects/current/current-ia-tempest.webp" />
+        <ProjectImagePair left="/projects/current/current-ia-phase-3.webp" right="/projects/current/current-ia-tempest.webp" />
       </ScrollReveal>
 
       {/* Case Study Block */}
       <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] py-16 md:py-24 flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-32">
         <div className="w-full lg:w-[40%]">
-          <Eyebrow>Risk management</Eyebrow>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.1]">
-            Navigating edge cases &amp; risk
+            Navigating edge cases, trade-offs, &amp; risk
           </h2>
         </div>
         <div className="w-full lg:w-[60%] flex flex-col gap-6">
@@ -237,6 +214,9 @@ export default function ProjectPage() {
             </p>
             <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
               To mitigate this, I designed distinct contextual states for the UI components depending on the user's lifecycle (New, Active, Limit Reached, Ineligible (State Restriction)). We also gated the visible limits behind specific feature flags to A/B test the impact on user sentiment and inbound support volume before a full rollout.
+            </p>
+            <p className="text-foreground/70 text-lg md:text-xl font-medium leading-relaxed max-w-3xl mt-4">
+              At several points, design vision clashed with product strategy. For instance, we debated where to surface overdraft limits; while design felt it belonged in card controls for better organization, the business team pushed for the overview screen to maximize visibility of user liquidity.
             </p>
           </div>
         </div>
@@ -283,7 +263,7 @@ export default function ProjectPage() {
         </div>
       </ScrollReveal>
 
-      <ScrollReveal className="w-full px-4 md:px-8 xl:px-[4%] pb-16 md:pb-24">
+      <ScrollReveal className="w-full px-12 md:px-12 xl:px-[16%] pb-16 md:pb-24">
         <ProjectImagePair left="/projects/current/current-ia.webm" right="/projects/current/pca-draw.webm" />
       </ScrollReveal>
 

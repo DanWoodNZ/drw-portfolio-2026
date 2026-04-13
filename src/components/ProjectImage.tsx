@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CustomVideoPlayer } from "./CustomVideoPlayer";
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -9,13 +10,10 @@ function isVideo(src: string) {
 function Media({ src, alt }: { src: string; alt?: string }) {
   if (isVideo(src)) {
     return (
-      <video
+      <CustomVideoPlayer 
         src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full h-auto rounded-[16px] md:rounded-[20px]"
+        className="w-full h-auto block"
+        containerClassName="w-full h-auto rounded-[16px] md:rounded-[20px]"
       />
     );
   }
